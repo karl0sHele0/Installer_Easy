@@ -14,8 +14,8 @@
                     <RowDefinition Height="30*"/>
                     <RowDefinition Height="30*"/>
                     <RowDefinition Height="35*"/>
-                    <RowDefinition Height="18*"/>
-                    <RowDefinition Height="29*"/>
+                    <RowDefinition Height="31*"/>
+                    <RowDefinition Height="16*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="51*"/>
@@ -26,9 +26,10 @@
                 <Label x:Name="lblDownload" Content="Descarga de Archivos : " Grid.Row="2" VerticalAlignment="Center" Foreground="White" Height="28" Margin="0,0,10,0"/>
                 <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="2" Margin="9,4,10,4"/>
                 <Button x:Name="btnDownload" Grid.Column="1" Content="Instalar" Margin="331,3,10,3" Grid.Row="3" Background="#FFEFC724" BorderBrush="#FFF5F5F7" Foreground="White" Click="btnDownload_Click"/>
-                <Button x:Name="btnChooseFolder" Grid.Column="2" Content="..." Grid.Row="1" Background="#FFEFC724" Foreground="White" BorderBrush="White" Margin="2,5,0,5" HorizontalAlignment="Left" Width="18" Click="btnChooseFolder_Click"/>
-                <Label x:Name="txtPath" Grid.Column="1" Content=".../..." HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Foreground="White" Width="463"/>
-                <CheckBox x:Name="chbxStart" Grid.Column="1" Content="Agregar al Inicio" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Margin="9,0,0,0" IsChecked="True" Checked="checkToStart" Unchecked="checkToStart" Foreground="White" Width="140"/>
+                <Button x:Name="btnChooseFolder" Grid.Column="2" Content="..." Grid.Row="1" Background="#FFEFC724" Foreground="White" BorderBrush="White" Margin="2,5,0,5" HorizontalAlignment="Left" Width="18" Click="btnChooseFolder_Click" FontSize="12"/>
+                <Label x:Name="txtPath" Grid.Column="1" Content=".../..." HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center" Foreground="White" Width="463" Height="28"/>
+                <CheckBox x:Name="chbxStart" Grid.Column="1" Content="Agregar al Inicio" HorizontalAlignment="Left" Grid.Row="3" VerticalAlignment="Center" Margin="9,0,0,0" IsChecked="True" Checked="checkToStart" Unchecked="checkToStart" Foreground="White" Width="140" Height="18"/>
+                <Button x:Name="btnConfigData" Content="#" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="4" VerticalAlignment="Center" Height="17" Width="19" FontSize="10" Foreground="White" Background="#FFEFC724" BorderBrush="White" Click="btnConfigData_Click"/>
             </Grid>
         </GroupBox>
 

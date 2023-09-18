@@ -18,9 +18,11 @@ namespace Installer_O
     /// </summary>
     public partial class MainWindow : Window
     {
-        private string AppNameKey = "EasyOtest";
-        private string zipFileName = "EasyOrchestra_v1008.zip";
-        private string exeFileName = "EasyOrchestra.exe";
+        public static string AppNameKey = "EasyOtest";
+        public static string zipFileName = "EasyOrchestra_v1008.zip";
+        public static string exeFileName = "EasyOrchestra.exe";
+        public static string linkDownload = "https://www.dropbox.com/scl/fi/dv10pctopm9jygiuegeh8/EasyOrchestra_v1008.zip?rlkey=0kllq0mwwyp2ito5rsaur5opt&dl=1";
+
         private string Appdata;
         private string LocationFiles;
         private string StartupPath;
@@ -39,14 +41,20 @@ namespace Installer_O
             commonStartMenuPath = Environment.GetFolderPath(Environment.SpecialFolder.CommonStartMenu);
             txtPath.Content = LocationFiles;
 
-            DwFiles.Add(new DwFiles{ nameFile = zipFileName, pathFile = LocationFiles, linkSource= "https://www.dropbox.com/scl/fi/dv10pctopm9jygiuegeh8/EasyOrchestra_v1008.zip?rlkey=0kllq0mwwyp2ito5rsaur5opt&dl=1" });
+            DwFiles.Add(new DwFiles{ nameFile = zipFileName, pathFile = LocationFiles, linkSource = linkDownload });
         }
 
         private async void btnDownload_Click(object sender, RoutedEventArgs e)
         {
-            btnDownload.Content = "Cancelar";
+            btnChooseFolder.IsEnabled = false;
+            btnDownload.IsEnabled = false;
+
+            //btnDownload.Content = "Cancelar";
             try
             {
+                if (!Directory.Exists(txtPath.Content.ToString()))
+                    Directory.CreateDirectory(txtPath.Content.ToString());
+
                 //Descargar archivo
                 progressBar.IsIndeterminate = true;
                 await DownloadAsync(DwFiles.ElementAt(0));
@@ -150,6 +158,19 @@ namespace Installer_O
         private void checkToStart(object sender, RoutedEventArgs e)
         {
             makeShortcut = (bool)chbxStart.IsChecked;
+        }
+
+        private void btnConfigData_Click(object sender, RoutedEventArgs e)
+        {
+            ConfigDownload cd = new ConfigDownload();
+            if( cd.ShowDialog() == true)
+            {
+                Appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + AppNameKey;
+                LocationFiles = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\" + AppNameKey;
+                txtPath.Content = LocationFiles;
+                DwFiles.ElementAt(0).nameFile = zipFileName;
+                DwFiles.ElementAt(0).linkSource = linkDownload;
+            }
         }
     }
 }

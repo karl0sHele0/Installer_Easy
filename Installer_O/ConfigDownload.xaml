@@ -1,0 +1,25 @@
+﻿<Window x:Class="Installer_O.ConfigDownload"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Installer_O"
+        mc:Ignorable="d"
+        Title="ConfigDownload" Height="264" Width="470">
+    <Grid Background="#FFEFC724">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="113*"/>
+            <ColumnDefinition Width="357*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lblNameKey" Content="Name Key :" HorizontalAlignment="Left" Margin="41,0,0,192" VerticalAlignment="Bottom" Foreground="White" Height="26" Width="70"/>
+        <Label x:Name="lblNameZip" Content="Zip Name :" HorizontalAlignment="Left" Margin="41,0,0,146" VerticalAlignment="Bottom" Foreground="White" Height="26" Width="68"/>
+        <Label Content="Exe Name : " HorizontalAlignment="Left" Margin="39,0,0,103" VerticalAlignment="Bottom" Foreground="White" Height="26" Width="72"/>
+        <Label Content="Link Download" HorizontalAlignment="Left" Margin="20,0,0,53" VerticalAlignment="Bottom" Foreground="White" Height="26" Width="89"/>
+        <TextBox x:Name="txtNameKey" HorizontalAlignment="Left" Margin="0,0,0,197" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="339" Height="21" Foreground="Black" Background="White" Text="EasyOtest" Grid.Column="1"/>
+        <TextBox x:Name="txtZipName" HorizontalAlignment="Left" Margin="0,0,0,151" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="339" Height="21" Foreground="Black" Background="White" Text="EasyOrchestra_v1008.zip" Grid.Column="1"/>
+        <TextBox x:Name="txtExeName" HorizontalAlignment="Left" Margin="0,0,0,106" TextWrapping="Wrap" VerticalAlignment="Bottom" Width="339" Height="21" Foreground="Black" Background="White" Text="EasyOrchestra.exe" Grid.Column="1"/>
+        <TextBox x:Name="txtDownloadLink" HorizontalAlignment="Left" Margin="0,0,0,53" VerticalAlignment="Bottom" Width="339" Height="21" Foreground="#FF200EA0" Background="White" Text="https://www.dropbox.com/scl/fi/dv10pctopm9jygiuegeh8/EasyOrchestra_v1008.zip?rlkey=0kllq0mwwyp2ito5rsaur5opt&amp;dl=1" UndoLimit="1000" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:Name="btnSave" Content="Guardar" HorizontalAlignment="Left" Margin="280,0,0,19" Width="59" Background="#FFEFC724" Foreground="#FFFBFBFB" BorderBrush="White" Click="btnSave_Click" Grid.Column="1" Height="20" VerticalAlignment="Bottom"/>
+
+    </Grid>
+</Window>
