@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Installer_O"
         mc:Ignorable="d"
-        Title="ConfigDownload" Height="264" Width="470">
+        Title="Config Download" Height="264" Width="470" Icon="/easy-installation_64.png">
     <Grid Background="#FFEFC724">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="113*"/>

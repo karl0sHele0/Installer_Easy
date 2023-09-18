@@ -18,10 +18,10 @@ namespace Installer_O
     /// </summary>
     public partial class MainWindow : Window
     {
-        public static string AppNameKey = "EasyOtest";
-        public static string zipFileName = "EasyOrchestra_v1008.zip";
+        public static string AppNameKey = "EasyO";
+        public static string zipFileName = "EasyO_v1.0800.zip";
         public static string exeFileName = "EasyOrchestra.exe";
-        public static string linkDownload = "https://www.dropbox.com/scl/fi/dv10pctopm9jygiuegeh8/EasyOrchestra_v1008.zip?rlkey=0kllq0mwwyp2ito5rsaur5opt&dl=1";
+        public static string linkDownload = "https://www.dropbox.com/scl/fi/es85xur3j176zjity3jpf/EasyO_v1.0800.zip?rlkey=5i2m5sgoz7xhw0kof77wrsf7n&dl=1";
 
         private string Appdata;
         private string LocationFiles;
@@ -60,10 +60,11 @@ namespace Installer_O
                 await DownloadAsync(DwFiles.ElementAt(0));
                 progressBar.IsIndeterminate = false;
             }
-            catch
+            catch (Exception ex)
             {
+                Debug.WriteLine(ex);
                 progressBar.IsIndeterminate = false;
-                System.Windows.MessageBox.Show("No se pudo completar la descarga de componentes, favor validar la conexion de internet");
+                System.Windows.MessageBox.Show(Tags.ErrorD01, Tags.Error01, System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Error);
                 return;
             }
 
@@ -91,6 +92,7 @@ namespace Installer_O
             };
             Process.Start(p_info);
 
+            System.Windows.MessageBox.Show(Tags.CompleteDt, Tags.Completed, System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
             Environment.Exit(0);
 
         }
@@ -146,8 +148,8 @@ namespace Installer_O
             FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
             if (folderBrowserDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                LocationFiles = folderBrowserDialog1.SelectedPath.ToString() + "\\" + AppNameKey;
-                txtPath.Content = folderBrowserDialog1.SelectedPath + "\\" + AppNameKey;
+                LocationFiles = folderBrowserDialog1.SelectedPath;
+                txtPath.Content = LocationFiles + "\\" + AppNameKey;
             }
             else
             {
@@ -166,10 +168,10 @@ namespace Installer_O
             if( cd.ShowDialog() == true)
             {
                 Appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + AppNameKey;
-                LocationFiles = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + "\\" + AppNameKey;
-                txtPath.Content = LocationFiles;
+                txtPath.Content = LocationFiles + "\\" + AppNameKey;
                 DwFiles.ElementAt(0).nameFile = zipFileName;
                 DwFiles.ElementAt(0).linkSource = linkDownload;
+                DwFiles.ElementAt(0).pathFile = LocationFiles + "\\" + AppNameKey;
             }
         }
     }

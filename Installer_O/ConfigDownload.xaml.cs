@@ -22,6 +22,10 @@ namespace Installer_O
         public ConfigDownload()
         {
             InitializeComponent();
+            txtNameKey.Text = MainWindow.AppNameKey;
+            txtDownloadLink.Text = MainWindow.linkDownload;
+            txtZipName.Text = MainWindow.zipFileName;
+            txtExeName.Text = MainWindow.exeFileName;
         }
 
         private void btnSave_Click(object sender, RoutedEventArgs e)
