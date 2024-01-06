@@ -19,9 +19,10 @@ namespace Installer_O
     public partial class MainWindow : Window
     {
         public static string AppNameKey = "EasyO";
-        public static string zipFileName = "EasyO_v1.0800.zip";
+        public static string zipFileName = "EasyO_v1.0801.zip"; //EasyO_v1.0800.zip
         public static string exeFileName = "EasyOrchestra.exe";
-        public static string linkDownload = "https://www.dropbox.com/scl/fi/es85xur3j176zjity3jpf/EasyO_v1.0800.zip?rlkey=5i2m5sgoz7xhw0kof77wrsf7n&dl=1";
+        public static string linkDownload = "https://znkreg.bl.files.1drv.com/y4mAi-EimjeHCVnJybdu0_P7ArIXVj7JangqDKrgKUerUWR-esvCmLlVsd6Qz4k_QoBotVO1ZrpBGm_3U0PkrKBxUryWIDlGTDUKLZSkp_DE3p2LXkrqZtEZvhAnYNklyNDNGp50vSEvL8K5XegicOEOgk3NAcDA2LX6wPwBesrgD7YDWIyPmL6vX4qjvfc-_jrpNA04xLkNDlrC0fT8feSMw";
+            //"https://www.dropbox.com/scl/fi/es85xur3j176zjity3jpf/EasyO_v1.0800.zip?rlkey=5i2m5sgoz7xhw0kof77wrsf7n&dl=1";
 
         private string Appdata;
         private string LocationFiles;
