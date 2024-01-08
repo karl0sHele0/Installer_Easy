@@ -1,9 +1,9 @@
 # Installer - EasyO
 
-Instalador de EasyO (EasyOrchestra).<br>
+Instalador de EasyO [(EasyOrchestra)](https://github.com/karl0sHele0/EasyOrchestra) .<br>
 Con finalidad de ser adaptable a múltiples  proyectos.
 
-![Easy O](https://uce2ebb4edd6ecd4ef50d7475fca.previews.dropboxusercontent.com/p/thumb/ACBbVUXRG-5URNZO3UGtnMQvA5Pti3gUS-KMKJsCsMwbtEtWBmUtJALsX4YlabwaPkHvhtqkK52bg4tHAcUNvR9uUgDP9v4HGd1zdBk7ITxUAODuJzVs4PP7_uwyip1c_t9xCiLaWUHoy-UfNAigXEkkbJXldZc1KbuonQqh0C9yJkHLLpu1DQZ4LX43eSPT5BckC4vc9_fCmK93A4NuvGjX5ME0ZHHF5oQN4GYrOyVwWuz3da9LBMTMq8JVTALUa5zt5g3VSOoyOJy_XduA6VzBouSU_MEXtJ2xqALTrBZfCMWaRE3UOjUzq-C4D4BS7dCPdPapXzl-3ABEGIdeppZQucA93etHd8IXxEZRLgpSYNlSGrftKJN6b29rqVGhVOw/p.png)
+<img src="https://onedrive.live.com/embed?resid=FB6DDABAE9D19287%2163190&authkey=%21AITAQiwyPDCGXiI&width=1066&height=483" width="1066" height="483"  style="display:block; margin: 0 auto" alt="Installer_EasyO Win11"/>
 
 ## <u>Detalles Técnicos:</u>
 - Sistema Operativo: Windows 10
