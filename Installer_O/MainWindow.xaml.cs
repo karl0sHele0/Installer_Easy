@@ -19,10 +19,9 @@ namespace Installer_O
     public partial class MainWindow : Window
     {
         public static string AppNameKey = "EasyO";
-        public static string zipFileName = "EasyO_v1.0801.zip"; //EasyO_v1.0800.zip
+        public static string zipFileName = "EasyO_v1.0804.zip"; //EasyO_v1.0804.zip
         public static string exeFileName = "EasyOrchestra.exe";
-        public static string linkDownload = "https://znkreg.bl.files.1drv.com/y4mAi-EimjeHCVnJybdu0_P7ArIXVj7JangqDKrgKUerUWR-esvCmLlVsd6Qz4k_QoBotVO1ZrpBGm_3U0PkrKBxUryWIDlGTDUKLZSkp_DE3p2LXkrqZtEZvhAnYNklyNDNGp50vSEvL8K5XegicOEOgk3NAcDA2LX6wPwBesrgD7YDWIyPmL6vX4qjvfc-_jrpNA04xLkNDlrC0fT8feSMw";
-            //"https://www.dropbox.com/scl/fi/es85xur3j176zjity3jpf/EasyO_v1.0800.zip?rlkey=5i2m5sgoz7xhw0kof77wrsf7n&dl=1";
+        public static string linkDownload = "https://onedrive.live.com/download?resid=FB6DDABAE9D19287%2163201&authkey=!ABizkk-7l98Yq9s";
 
         private string Appdata;
         private string LocationFiles;
@@ -169,10 +168,9 @@ namespace Installer_O
             if( cd.ShowDialog() == true)
             {
                 Appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\" + AppNameKey;
-                txtPath.Content = LocationFiles + "\\" + AppNameKey;
                 DwFiles.ElementAt(0).nameFile = zipFileName;
                 DwFiles.ElementAt(0).linkSource = linkDownload;
-                DwFiles.ElementAt(0).pathFile = LocationFiles + "\\" + AppNameKey;
+                //DwFiles.ElementAt(0).pathFile = LocationFiles + "\\" + AppNameKey;
             }
         }
     }
